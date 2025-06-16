@@ -1,0 +1,93 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: rgba(180, 141, 177, 9.3);
+background: linear-gradient(90deg, rgba(180, 141, 177, 0.78) 3%, rgb(124, 122, 218) 53%);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #4a1746;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    border: none;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card h2 {
+    color: #2d2d2d;
+    font-size: 26px;
+}
+
+.gratis {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.card ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.card ul li {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #4a4a4a;
+}
+
+.btn-selecionar {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4e6ba8;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.btn-selecionar:hover {
+    background-color: rgb(111, 109, 216);
+}
+
+.accordion {
+    --bs-accordion-border-radius: 5px;
+    --bs-accordion-inner-border-radius: 5px;
+    --bs-accordion-btn-focus-box-shadow: 0 0 0 .25rem rgba(78, 107, 168, 0.25);
+    --bs-accordion-active-color: #ffffff;
+    --bs-accordion-active-bg: #6162a5;
+    --bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%234e6ba8'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.accordion-body{
+    margin-bottom: 4%;
+}
+
+.accordion-button {
+    background-color: #f1f1f1;
+    color: #444;
+}
+
+.accordion-button:not(.collapsed) {
+    box-shadow: inset 0 -1px 0 rgba(0,0,0,.125);
+}
+
+.accordion-item {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}

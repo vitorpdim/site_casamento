@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Convidados</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="form-container">
+            <h2>Adicionar convite</h2>
+            <div class="form-group">
+                <label>Identificação do convite</label>
+                <input type="text" id="convite" placeholder="Digite o nome do convite">
+            </div>
+            <div class="form-group">
+                <label>Telefone de contato (Opcional)</label>
+                <input type="text" id="telefone" placeholder="BR +55">
+            </div>
+            <div class="form-group">
+                <label>E-mail de contato (Opcional)</label>
+                <input type="email" id="email" placeholder="Digite o e-mail">
+            </div>
+            <h3>Convidados neste convite</h3>
+            <div class="form-group">
+                <input type="text" id="convidado" placeholder="Nome completo do convidado">
+            </div>
+            <div class="form-group">
+                <input type="text" id="tags" placeholder="Tags">
+            </div>
+            <div class="form-group">
+                <button onclick="adicionarConvidado()">Adicionar convidado</button>
+            </div>
+        </div>
+
+        <div class="card-container" id="card">
+            <h3>Lista de Convidados</h3>
+            <ul id="listaConvidados"></ul>
+        </div>
+    </div>
+
+    <script>
+        function adicionarConvidado() {
+            let nomeConvidado = document.getElementById("convidado").value;
+            let telefone = document.getElementById("telefone").value;
+            let email = document.getElementById("email").value;
+            let tags = document.getElementById("tags").value;
+
+            if (nomeConvidado.trim() === "") {
+                alert("Por favor, insira o nome do convidado.");
+                return;
+            }
+
+            let lista = document.getElementById("listaConvidados");
+            let item = document.createElement("li");
+            item.innerHTML = `<strong>${nomeConvidado}</strong> - ${telefone} - ${email} - <em>${tags}</em>`;
+            lista.appendChild(item);
+
+            document.getElementById("convidado").value = "";
+            document.getElementById("tags").value = "";
+        }
+
+    </script>
+</body>
+</html>
